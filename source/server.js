@@ -13,6 +13,8 @@ app.use(express.json());
 
 // Setting up the routes
 const subscribersRouter = require('./routes/subscribers');
+const filesRouter = require('./routes/files');
 app.use('/subscribers', subscribersRouter);
+app.use('/files', filesRouter);
 
 app.listen(process.env.PORT, () => console.log('Server Started at', process.env.PORT));
